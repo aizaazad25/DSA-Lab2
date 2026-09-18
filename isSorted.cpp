@@ -65,6 +65,23 @@ void testNegativeValues() {
 
     assert(result == true);
 }
+// Test 7: All elements are the same
+void testSameValues() {
+    int arr[] = {7, 7, 7, 7};
+
+    bool result = isSorted(arr, 4);
+
+    assert(result == true);
+}
+
+// Test 8: Negative and positive values
+void testNegativePositiveValues() {
+    int arr[] = {-10, -5, 0, 5, 10};
+
+    bool result = isSorted(arr, 5);
+
+    assert(result == true);
+}
 
 int main() {
 
@@ -74,6 +91,8 @@ int main() {
 testSingleElement();
 testDescendingArray();
 testNegativeValues();
+testSameValues();
+testNegativePositiveValues();
 
     cout << "All tests passed!" << endl;
 
