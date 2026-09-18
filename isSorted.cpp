@@ -30,13 +30,54 @@ void testUnsortedArray() {
 
     assert(result == false);
 }
+// Test 3: Sorted array with duplicate values
+void testDuplicateValues() {
+    int arr[] = {1, 2, 2, 3, 5};
+
+    bool result = isSorted(arr, 5);
+
+    assert(result == true);
+}
+
+// Test 4: One element
+void testSingleElement() {
+    int arr[] = {10};
+
+    bool result = isSorted(arr, 1);
+
+    assert(result == true);
+}
+
+// Test 5: Descending order
+void testDescendingArray() {
+    int arr[] = {5, 4, 3, 2, 1};
+
+    bool result = isSorted(arr, 5);
+
+    assert(result == false);
+}
+
+// Test 6: Negative values
+void testNegativeValues() {
+    int arr[] = {-5, -3, -1, 0, 2};
+
+    bool result = isSorted(arr, 5);
+
+    assert(result == true);
+}
 
 int main() {
 
     testSortedArray();
     testUnsortedArray();
+    testDuplicateValues();
+testSingleElement();
+testDescendingArray();
+testNegativeValues();
 
     cout << "All tests passed!" << endl;
+
+
 
     return 0;
 }
